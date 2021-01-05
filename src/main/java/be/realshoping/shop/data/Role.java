@@ -3,7 +3,7 @@ package be.realshoping.shop.data;
 import javax.persistence.*;
 import java.util.List;
 
-@Entity(name = "user")
+@Entity(name = "role")
 public class Role {
     @Id
     @GeneratedValue(strategy =  GenerationType.AUTO)
