@@ -10,8 +10,8 @@ public class Role {
     private Integer id;
     private String role;
 
-//    @OneToMany(mappedBy = "user", cascade = CascadeType.PERSIST)
-//    private List<User> users;
+    @OneToMany/*(mappedBy = "role", cascade = CascadeType.PERSIST)*/
+    private List<User> users;
 
     public Integer getId() {
         return id;
@@ -29,11 +29,11 @@ public class Role {
         this.role = role;
     }
 
-//    public List<User> getUsers() {
-//        return users;
-//    }
-//
-//    public void setUsers(List<User> users) {
-//        this.users = users;
-//    }
+    public List<User> getUsers() {
+        return users;
+    }
+
+    public void setUsers(List<User> users) {
+        this.users = users;
+    }
 }

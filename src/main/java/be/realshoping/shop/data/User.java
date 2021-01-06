@@ -21,6 +21,9 @@ public class User {
     @Column(name = "active_user")
     private boolean activeUser;
 
+    @ManyToOne
+    private Role role;
+
     public String getImgUtl() {
         return imgUtl;
     }
