@@ -128,4 +128,22 @@ public class Product {
     public void setProductImages(List<ProductImage> productImages) {
         this.productImages = productImages;
     }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", category='" + category + '\'' +
+                ", productModel='" + productModel + '\'' +
+                ", productName='" + productName + '\'' +
+                ", price=" + price +
+                ", productDataAdd=" + productDataAdd +
+                ", modified=" + modified +
+                ", available=" + available +
+                ", status=" + status +
+                ", countOfProduct=" + countOfProduct +
+                ", description='" + description + '\'' +
+                ", extraInfo='" + extraInfo + '\'' +
+                '}';
+    }
 }

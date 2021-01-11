@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Insert Product</title>
+</head>
+<body>
+<h2>Insert product</h2>
+    <form method="post" th:action = "@{/product/insert-product}" th:object="${product}" name="insert-product">
+        <div>
+            <label>Category: </label>
+            <input type="text" name="category" th:field="${product.category}">
+        </div>
+        <div>
+            <label>Product Model: </label>
+            <input type="text" name="productModel">
+        </div>
+        <div>
+            <label>Product Name: </label>
+            <input type="text" name="productName">
+        </div>
+        <div>
+            <label>Price: </label>
+            <input type="number" step="0.01" min="0" max="100000" name="price">
+        </div>
+        <div>
+            <label>Count Of product: </label>
+            <input type="number" name="countOfProduct">
+        </div>
+        <div>
+            <label>Description: </label>
+            <input type="text" name="description">
+        </div>
+        <div>
+            <input type="checkbox" id="ava" >
+            <label for="ava">Is the product available: </label>
+        </div>
+        <div>
+            <input type="checkbox" id="stat" >
+            <label for="stat">Show the product in the Shop: </label>
+        </div>
+        <div>
+            <label>Extra info: </label>
+            <input type="text" name="extraInfo">
+        </div>
+        <button type="submit">Save</button>
+    </form>
+</body>
+</html>
