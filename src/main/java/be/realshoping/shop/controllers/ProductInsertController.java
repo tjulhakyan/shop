@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.io.File;
 import java.time.LocalDate;
 
 @Controller
@@ -33,6 +34,7 @@ public class ProductInsertController {
         product.setModified(date);
         product.setProductDataAdd(date);
         System.out.println(product);
+
         productRepository.save(product);
 //        this.user=user;
 //        model.addAttribute("user", user);

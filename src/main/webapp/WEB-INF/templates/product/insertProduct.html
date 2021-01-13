@@ -22,28 +22,29 @@
         </div>
         <div>
             <label>Price: </label>
-            <input type="number" step="0.01" min="0" max="100000" name="price">
+            <input type="number" step="0.01" min="0" max="999999" name="price">
         </div>
         <div>
             <label>Count Of product: </label>
-            <input type="number" name="countOfProduct">
+            <input type="number" min="0" max="999999" name="countOfProduct">
         </div>
         <div>
             <label>Description: </label>
             <input type="text" name="description">
         </div>
         <div>
-            <input type="checkbox" id="ava" >
+            <input type="checkbox" id="ava" th:field="*{available}">
             <label for="ava">Is the product available: </label>
         </div>
         <div>
-            <input type="checkbox" id="stat" >
+            <input type="checkbox" id="stat" th:field="*{status}">
             <label for="stat">Show the product in the Shop: </label>
         </div>
         <div>
             <label>Extra info: </label>
-            <input type="text" name="extraInfo">
+            <textarea id="extra-info" name="extraInfo" rows="5" cols="50"></textarea>
         </div>
+        <div><input type="file" id="files" name="files" multiple></div>
         <button type="submit">Save</button>
     </form>
 </body>
