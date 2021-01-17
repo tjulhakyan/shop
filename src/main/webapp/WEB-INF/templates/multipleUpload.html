@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>multiple upload</title>
+</head>
+<body>
+    <h4>Upload Multiple Files:</h4>
+    <form method="POST" th:action="@{/multipleUploadFiles}" enctype="multipart/form-data">
+        <input type="file" name="files" multiple/> <br/><br/>
+        <button type="submit">Submit</button>
+    </form>
+
+<hr/>
+</body>
+</html>
