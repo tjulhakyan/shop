@@ -22,12 +22,9 @@ public class UploadImageController {
 
     @PostMapping("/upload")
     public String uploadFile(@RequestParam("file") MultipartFile file, RedirectAttributes redirectAttributes) {
-
         fileService.uploadFile(file);
-
         redirectAttributes.addFlashAttribute("message",
                 "You successfully uploaded " + file.getOriginalFilename() + "!");
-
         return "redirect:/upload";
     }
 }

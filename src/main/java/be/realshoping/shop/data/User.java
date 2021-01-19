@@ -11,7 +11,7 @@ public class User {
     private String name;
     private String surname;
     @Column(name="e_mail", nullable = false)
-    private String eMail;
+    private String email;
     private String phone;
     @Column(name = "img_url")
     private String imgUtl;
@@ -57,12 +57,12 @@ public class User {
         this.surname = surname;
     }
 
-    public String geteMail() {
-        return eMail;
+    public String getEmail() {
+        return email;
     }
 
-    public void seteMail(String eMail) {
-        this.eMail = eMail;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getPhone() {
@@ -120,7 +120,7 @@ public class User {
                 ", nikName='" + nikName + '\'' +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
-                ", eMail='" + eMail + '\'' +
+                ", eMail='" + email + '\'' +
                 ", phone='" + phone + '\'' +
                 ", imgUtl='" + imgUtl + '\'' +
                 ", password='" + password + '\'' +

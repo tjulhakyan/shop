@@ -27,6 +27,7 @@ public class MultipleUploadController {
 
         Arrays.asList(files)
                 .stream()
+                .peek(file -> System.out.println(file.getOriginalFilename()))
                 .forEach(file -> fileService.uploadFile(file));
 
         redirectAttributes.addFlashAttribute("message",

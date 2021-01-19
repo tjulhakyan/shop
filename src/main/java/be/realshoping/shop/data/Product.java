@@ -21,7 +21,7 @@ public class Product {
     private String description;
     private String extraInfo;
 
-    @OneToMany(mappedBy = "product", cascade = CascadeType.PERSIST)
+    @OneToMany(mappedBy = "product", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
 //    @JoinColumn(name = "productId")
     private List<ProductImage> productImages;
 

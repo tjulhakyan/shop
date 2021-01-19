@@ -3,6 +3,7 @@ package be.realshoping.shop.controllers;
 import be.realshoping.shop.data.Product;
 import be.realshoping.shop.data.User;
 import be.realshoping.shop.repositories.ProductRepository;
+import be.realshoping.shop.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,6 +14,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.io.File;
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 @RequestMapping("product")
@@ -20,6 +23,9 @@ public class ProductInsertController {
 
     @Autowired
     private ProductRepository productRepository;
+
+    @Autowired
+    private ProductService prodServ;
 
     @GetMapping("insert-product")
     public String insertProduct(Model model){
@@ -39,5 +45,15 @@ public class ProductInsertController {
 //        this.user=user;
 //        model.addAttribute("user", user);
         return "product/insertProduct";
+    }
+
+
+    @GetMapping("/all-products")
+    public String showAllProducts(Model model){
+        List<Product> list = new ArrayList<>();
+        list=prodServ.getAllProducts();
+        list.forEach(System.out::println);
+        model.addAttribute("products", prodServ.getAllProducts());
+        return "product/allProducts";
     }
 }
