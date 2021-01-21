@@ -15,8 +15,9 @@ public class ProductImage {
     public ProductImage() {
     }
 
-    public ProductImage(String imgUrl){
+    public ProductImage(String imgUrl, Product product){
         this.imgUrl=imgUrl;
+        this.product=product;
     }
 
     public Integer getId() {
@@ -41,5 +42,15 @@ public class ProductImage {
 
     public void setProduct(Product product) {
         this.product = product;
+    }
+
+    @Override
+    public String toString() {
+
+        return "ProductImage{" +
+                "id=" + id +
+                ", imgUrl='" + imgUrl + '\'' +
+                ", product=" + product +
+                '}';
     }
 }

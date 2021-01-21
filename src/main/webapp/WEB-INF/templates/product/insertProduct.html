@@ -7,7 +7,7 @@
 </head>
 <body>
 <h2>Insert product</h2>
-    <form method="post" th:action = "@{/product/insert-product}" th:object="${product}" name="insert-product">
+    <form method="post" th:action = "@{/product/insert-product}" th:object="${product}" name="insert-product" enctype="multipart/form-data">
         <div>
             <label>Category: </label>
             <input type="text" name="category" th:field="${product.category}">
@@ -44,7 +44,10 @@
             <label>Extra info: </label>
             <textarea id="extra-info" name="extraInfo" rows="5" cols="50"></textarea>
         </div>
-        <div><input type="file" id="files" name="files" multiple></div>
+        <div>
+            <input type="file" name="files" multiple/> <br/><br/>
+        </div>
+<!--        <div><input type="file" id="files" name="files" multiple></div>-->
         <button type="submit">Save</button>
     </form>
 </body>

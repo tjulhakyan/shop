@@ -129,6 +129,7 @@ public class Product {
         this.productImages = productImages;
     }
 
+
     @Override
     public String toString() {
         return "Product{" +
@@ -144,6 +145,7 @@ public class Product {
                 ", countOfProduct=" + countOfProduct +
                 ", description='" + description + '\'' +
                 ", extraInfo='" + extraInfo + '\'' +
+//                ", productImages=" + productImages.toString();+
                 '}';
     }
 }

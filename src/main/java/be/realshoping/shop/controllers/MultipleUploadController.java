@@ -1,5 +1,6 @@
 package be.realshoping.shop.controllers;
 
+import be.realshoping.shop.data.Product;
 import be.realshoping.shop.data.ProductImage;
 import be.realshoping.shop.service.FileService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,7 +37,7 @@ public class MultipleUploadController {
 
 
         List<ProductImage> prodImg= Arrays.asList(files).stream()
-                .map(file -> new ProductImage(file.getOriginalFilename()))
+                .map(file -> new ProductImage(file.getOriginalFilename(), new Product()))
                 .collect(Collectors.toList());
 
         prodImg.forEach(img -> System.out.println(img.getImgUrl()));

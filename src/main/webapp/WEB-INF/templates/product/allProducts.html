@@ -14,8 +14,9 @@
     <p th:text="${product.productName}"></p>
     <p th:text="${product.price}"></p>
     <p th:text="${product.productDataAdd}"></p>
-<!--    <img th:src="@{/images/{image}(image=${product.imageLocation})}" alt="">-->
-
+    <div th:each="allImges:${product.getProductImages}">
+        <img th:src="@{/images/home/all-products/{image}(image=${allImges.imgUrl})}" alt="">
+    </div>
     <hr>
 
 </div>
