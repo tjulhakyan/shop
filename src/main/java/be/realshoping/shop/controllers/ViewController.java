@@ -13,4 +13,10 @@ public class ViewController {
 
     @GetMapping("/shop")
     public String shopPage(){return "shop";}
+
+    @GetMapping("/admin/admin")
+    public String showAdmin(){
+        return "/admin/admin";
+    }
+
 }

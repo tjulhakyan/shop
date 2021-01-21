@@ -12,6 +12,13 @@ public class ProductImage {
     @ManyToOne
     private Product product;
 
+    public ProductImage() {
+    }
+
+    public ProductImage(String imgUrl){
+        this.imgUrl=imgUrl;
+    }
+
     public Integer getId() {
         return id;
     }
